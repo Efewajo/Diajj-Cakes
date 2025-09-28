@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Chefs | Diajj Cakes</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B6B',secondary:'#FFD166'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+body { font-family: 'Poppins', sans-serif; }
+h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="home.html" class="flex items-center space-x-2">
+      <div class="w-8 h-8 flex items-center justify-center">
+        <i class="ri-cake-3-fill text-primary text-3xl"></i>
+      </div>
+      <span class="text-3xl font-['Pacifico'] text-primary">Diajj Cakes</span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8">
+  <a href="home.html" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
+  <a href="about.html" class="text-gray-800 hover:text-primary font-medium transition">About</a>
+  <a href="product.html" class="text-gray-800 hover:text-primary font-medium transition">Products</a>
+  <a href="chefs.html" class="text-primary font-medium transition border-b-2 border-primary">Chefs</a>
+  <a href="testimonial.html" class="text-gray-800 hover:text-primary font-medium transition">Testimonials</a>
+  <a href="contact.html" class="text-gray-800 hover:text-primary font-medium transition">Contact</a>
+    </nav>
+    <button class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition shadow-md whitespace-nowrap">Order Now</button>
+    <div class="md:hidden w-10 h-10 flex items-center justify-center">
+      <i class="ri-menu-line ri-2x text-gray-800"></i>
+    </div>
+  </div>
+</header>
+
+<!-- Chefs Section -->
+<section class="pt-32 pb-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Master Chefs</h1>
+      <p class="text-lg text-gray-600">The creative minds and skilled hands behind every Diajj cake.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Chef 1 -->
+      <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Chef Ada" class="w-24 h-24 rounded-full mb-4 object-cover shadow">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Ada Okafor</h3>
+        <p class="text-primary font-medium mb-2">Head Cake Designer</p>
+        <p class="text-gray-600 text-center">Ada brings over 20 years of experience and a flair for elegant, creative cake designs.</p>
+      </div>
+      <!-- Chef 2 -->
+      <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef Tunde" class="w-24 h-24 rounded-full mb-4 object-cover shadow">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Tunde Balogun</h3>
+        <p class="text-primary font-medium mb-2">Lead Baker</p>
+        <p class="text-gray-600 text-center">Tunde’s expertise in flavor and texture ensures every cake tastes as good as it looks.</p>
+      </div>
+      <!-- Chef 3 -->
+      <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chef Chiamaka" class="w-24 h-24 rounded-full mb-4 object-cover shadow">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Chiamaka Eze</h3>
+        <p class="text-primary font-medium mb-2">Sugarcraft Specialist</p>
+        <p class="text-gray-600 text-center">Chiamaka’s sugar flowers and fondant work add magic to every celebration cake.</p>
+      </div>
+      <!-- Add more chefs as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Company Info -->
+      <div>
+        <a href="home.html" class="flex items-center space-x-2 mb-6">
+          <div class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-cake-3-fill text-white text-3xl"></i>
+          </div>
+          <span class="text-3xl font-['Pacifico'] text-white">Diajj Cakes</span>
+        </a>
+        <p class="text-gray-400 mb-6">Nigeria's premier cake artisans since 1985, Diajj Cakes creates masterpieces for your most cherished celebrations.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+            <i class="ri-facebook-fill text-white"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+            <i class="ri-instagram-line text-white"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+            <i class="ri-twitter-x-line text-white"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+            <i class="ri-pinterest-line text-white"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="home.html" class="text-gray-400 hover:text-primary transition">Home</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-primary transition">About Us</a></li>
+          <li><a href="product.html" class="text-gray-400 hover:text-primary transition">Our Products</a></li>
+          <li><a href="chefs.html" class="text-gray-400 hover:text-primary transition">Master Chefs</a></li>
+          <li><a href="testimonial.html" class="text-gray-400 hover:text-primary transition">Testimonials</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Wedding Cakes</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Birthday Cakes</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Corporate Events</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Custom Designs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Dessert Tables</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-primary transition">Cake Consultations</a></li>
+        </ul>
+      </div>
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Subscribe</h4>
+        <p class="text-gray-400 mb-4">Subscribe to Diajj Cakes newsletter for special offers, cake inspiration, and upcoming events.</p>
+        <form class="mb-4">
+          <div class="flex">
+            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l border-none focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm">
+            <button type="submit" class="bg-primary text-white px-4 py-3 !rounded-r-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Subscribe</button>
+          </div>
+        </form>
+        <div class="flex items-center space-x-4">
+          <span class="text-gray-400">We accept:</span>
+          <div class="flex space-x-2">
+            <i class="ri-visa-fill text-2xl text-gray-300"></i>
+            <i class="ri-mastercard-fill text-2xl text-gray-300"></i>
+            <i class="ri-paypal-fill text-2xl text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© 2025 Diajj Cakes. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-primary transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

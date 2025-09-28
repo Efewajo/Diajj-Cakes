@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f370.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>All Products | Diajj Cakes</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
@@ -108,21 +110,26 @@ input[type="number"]::-webkit-outer-spin-button {
 <!-- Header -->
 <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
   <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="home.html" class="flex items-center space-x-2">
+    <a href="index.html" class="flex items-center space-x-2">
       <div class="w-8 h-8 flex items-center justify-center">
         <i class="ri-cake-3-fill text-primary text-3xl"></i>
       </div>
       <span class="text-3xl font-['Pacifico'] text-primary">Diajj Cakes</span>
     </a>
     <nav class="hidden md:flex items-center space-x-8">
-      <a href="home.html" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
+      <a href="index.html" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
       <a href="about.html" class="text-gray-800 hover:text-primary font-medium transition">About</a>
       <a href="product.html" class="text-primary font-medium transition border-b-2 border-primary">Products</a>
       <a href="chefs.html" class="text-gray-800 hover:text-primary font-medium transition">Chefs</a>
       <a href="testimonial.html" class="text-gray-800 hover:text-primary font-medium transition">Testimonials</a>
       <a href="contact.html" class="text-gray-800 hover:text-primary font-medium transition">Contact</a>
     </nav>
-    <button class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition shadow-md whitespace-nowrap">Order Now</button>
+    <div class="flex items-center space-x-4">
+      <button id="cart-icon" class="relative bg-white text-primary px-3 py-2 rounded-full hover:bg-primary hover:text-white transition shadow-md">
+        <i class="ri-shopping-cart-2-line text-2xl"></i>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full px-2 py-0.5 font-bold">0</span>
+      </button>
+    </div>
     <div class="md:hidden w-10 h-10 flex items-center justify-center">
       <i class="ri-menu-line ri-2x text-gray-800"></i>
     </div>
@@ -131,13 +138,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 <!-- Page Title -->
 <section class="pt-32 pb-10 bg-gray-50">
-  <div class="container mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div>
         <h1 class="text-4xl font-bold text-gray-900 mb-2">Our Cake Collection</h1>
         <p class="text-lg text-gray-600">Browse our complete range of handcrafted cakes for every occasion</p>
       </div>
-      <a href="home.html" class="flex items-center text-primary hover:text-primary/80 transition mt-4 md:mt-0">
+        <a href="index.html" class="flex items-center text-primary hover:text-primary/80 transition mt-4 md:mt-0">
         <i class="ri-arrow-left-line mr-2"></i>
         <span>Back to Homepage</span>
       </a>
@@ -147,7 +154,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 <!-- Filter and Products Section -->
 <section class="py-12 bg-white">
-  <div class="container mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Filter Sidebar -->
       <div class="lg:w-1/4">
@@ -334,7 +341,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=elegant%2520three-tier%2520wedding%2520cake%2520with%2520white%2520fondant%252C%2520delicate%2520sugar%2520flowers%2520in%2520pastel%2520colors%252C%2520silver%2520accents%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1001&orientation=landscape" alt="Royal Wedding Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Royal Wedding Cake" data-price="85000" data-img="https://readdy.ai/api/search-image?query=elegant%2520three-tier%2520wedding%2520cake%2520with%2520white%2520fondant%252C%2520delicate%2520sugar%2520flowers%2520in%2520pastel%2520colors%252C%2520silver%2520accents%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1001&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -355,7 +362,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=colorful%2520birthday%2520cake%2520with%2520chocolate%2520drip%252C%2520sprinkles%252C%2520macarons%2520on%2520top%252C%2520vibrant%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1002&orientation=landscape" alt="Celebration Birthday Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Celebration Birthday Cake" data-price="35000" data-img="https://readdy.ai/api/search-image?query=colorful%2520birthday%2520cake%2520with%2520chocolate%2520drip%252C%2520sprinkles%252C%2520macarons%2520on%2520top%252C%2520vibrant%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1002&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -376,7 +383,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=elegant%2520anniversary%2520cake%2520with%2520red%2520roses%252C%2520gold%2520accents%252C%2520heart%2520decorations%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1003&orientation=landscape" alt="Anniversary Delight" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Anniversary Delight" data-price="45000" data-img="https://readdy.ai/api/search-image?query=elegant%2520anniversary%2520cake%2520with%2520red%2520roses%252C%2520gold%2520accents%252C%2520heart%2520decorations%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1003&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -397,7 +404,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=nigerian%2520traditional%2520engagement%2520cake%2520with%2520cultural%2520patterns%252C%2520vibrant%2520colors%252C%2520traditional%2520symbols%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1004&orientation=landscape" alt="Traditional Engagement Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Traditional Engagement Cake" data-price="65000" data-img="https://readdy.ai/api/search-image?query=nigerian%2520traditional%2520engagement%2520cake%2520with%2520cultural%2520patterns%252C%2520vibrant%2520colors%252C%2520traditional%2520symbols%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1004&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -418,7 +425,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=corporate%2520event%2520cake%2520with%2520company%2520logo%252C%2520professional%2520design%252C%2520blue%2520and%2520silver%2520color%2520scheme%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1005&orientation=landscape" alt="Corporate Event Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Corporate Event Cake" data-price="55000" data-img="https://readdy.ai/api/search-image?query=corporate%2520event%2520cake%2520with%2520company%2520logo%252C%2520professional%2520design%252C%2520blue%2520and%2520silver%2520color%2520scheme%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1005&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -439,7 +446,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=custom%2520themed%2520cake%2520for%2520children%2520with%2520cartoon%2520characters%252C%2520bright%2520colors%252C%2520playful%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1006&orientation=landscape" alt="Children's Fantasy Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Children's Fantasy Cake" data-price="40000" data-img="https://readdy.ai/api/search-image?query=custom%2520themed%2520cake%2520for%2520children%2520with%2520cartoon%2520characters%252C%2520bright%2520colors%252C%2520playful%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1006&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -460,7 +467,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=elegant%2520black%2520and%2520gold%2520birthday%2520cake%2520for%2520adults%252C%2520sophisticated%2520design%252C%2520gold%2520leaf%2520accents%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1007&orientation=landscape" alt="Black & Gold Elegance" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Black & Gold Elegance" data-price="50000" data-img="https://readdy.ai/api/search-image?query=elegant%2520black%2520and%2520gold%2520birthday%2520cake%2520for%2520adults%252C%2520sophisticated%2520design%252C%2520gold%2520leaf%2520accents%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1007&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -481,7 +488,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=tropical%2520themed%2520cake%2520with%2520fresh%2520fruits%252C%2520coconut%2520flakes%252C%2520bright%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1008&orientation=landscape" alt="Tropical Paradise" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Tropical Paradise" data-price="38000" data-img="https://readdy.ai/api/search-image?query=tropical%2520themed%2520cake%2520with%2520fresh%2520fruits%252C%2520coconut%2520flakes%252C%2520bright%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1008&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -502,7 +509,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=graduation%2520cake%2520with%2520cap%2520and%2520diploma%252C%2520school%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1009&orientation=landscape" alt="Graduation Success" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Graduation Success" data-price="42000" data-img="https://readdy.ai/api/search-image?query=graduation%2520cake%2520with%2520cap%2520and%2520diploma%252C%2520school%2520colors%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1009&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -523,7 +530,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=baby%2520shower%2520cake%2520with%2520pastel%2520colors%252C%2520baby%2520items%2520decorations%252C%2520gender%2520reveal%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1010&orientation=landscape" alt="Baby Shower Delight" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Baby Shower Delight" data-price="36000" data-img="https://readdy.ai/api/search-image?query=baby%2520shower%2520cake%2520with%2520pastel%2520colors%252C%2520baby%2520items%2520decorations%252C%2520gender%2520reveal%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1010&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -544,7 +551,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=rustic%2520naked%2520cake%2520with%2520fresh%2520berries%252C%2520minimal%2520frosting%252C%2520flower%2520decorations%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1011&orientation=landscape" alt="Rustic Berry Naked Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Rustic Berry Naked Cake" data-price="32000" data-img="https://readdy.ai/api/search-image?query=rustic%2520naked%2520cake%2520with%2520fresh%2520berries%252C%2520minimal%2520frosting%252C%2520flower%2520decorations%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1011&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -565,7 +572,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <div class="relative overflow-hidden h-64">
               <img src="https://readdy.ai/api/search-image?query=nigerian%2520traditional%2520wedding%2520cake%2520with%2520ankara%2520fabric%2520patterns%252C%2520cultural%2520symbols%252C%2520elegant%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1012&orientation=landscape" alt="Nigerian Heritage Wedding Cake" class="w-full h-full object-cover object-top transition-transform duration-500">
               <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                <button class="order-button bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap">Order Now</button>
+                <button class="add-to-cart bg-primary text-white px-6 py-2.5 !rounded-button font-medium opacity-0 transform translate-y-4 transition-all duration-300 whitespace-nowrap" data-name="Nigerian Heritage Wedding Cake" data-price="90000" data-img="https://readdy.ai/api/search-image?query=nigerian%2520traditional%2520wedding%2520cake%2520with%2520ankara%2520fabric%2520patterns%252C%2520cultural%2520symbols%252C%2520elegant%2520design%252C%2520professional%2520cake%2520photography%2520with%2520soft%2520natural%2520lighting%252C%2520clean%2520white%2520background%252C%2520luxury%2520cake%2520display&width=600&height=400&seq=1012&orientation=landscape">Add to Cart</button>
               </div>
             </div>
             <div class="p-6">
@@ -606,11 +613,24 @@ input[type="number"]::-webkit-outer-spin-button {
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white pt-16 pb-8">
-  <div class="container mx-auto px-6">
+<!-- Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8 relative">
+    <button id="close-cart" class="absolute top-4 right-4 text-gray-500 hover:text-primary text-2xl"><i class="ri-close-line"></i></button>
+    <h2 class="text-2xl font-bold mb-6 text-primary">Your Cart</h2>
+    <div id="cart-items" class="mb-6"></div>
+    <div class="flex justify-between items-center mb-6">
+      <span class="font-semibold text-lg">Total:</span>
+      <span id="cart-total" class="text-primary font-bold text-xl">₦0</span>
+    </div>
+    <button id="checkout-btn" class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-opacity-90 transition shadow-md">Checkout</button>
+  </div>
+</div>
+  <div class="max-w-7xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
       <!-- Company Info -->
       <div>
-        <a href="home.html" class="flex items-center space-x-2 mb-6">
+          <a href="index.html" class="flex items-center space-x-2 mb-6">
           <div class="w-8 h-8 flex items-center justify-center">
             <i class="ri-cake-3-fill text-white text-3xl"></i>
           </div>
@@ -636,11 +656,11 @@ input[type="number"]::-webkit-outer-spin-button {
       <div>
         <h4 class="text-xl font-bold mb-6">Quick Links</h4>
         <ul class="space-y-3">
-          <li><a href="home.html" class="text-gray-400 hover:text-primary transition">Home</a></li>
+            <li><a href="index.html" class="text-gray-400 hover:text-primary transition">Home</a></li>
           <li><a href="about.html" class="text-gray-400 hover:text-primary transition">About Us</a></li>
           <li><a href="product.html" class="text-gray-400 hover:text-primary transition">Our Products</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-primary transition">Master Chefs</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-primary transition">Testimonials</a></li>
+          <li><a href="chefs.html" class="text-gray-400 hover:text-primary transition">Master Chefs</a></li>
+          <li><a href="testimonial.html" class="text-gray-400 hover:text-primary transition">Testimonials</a></li>
           <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
         </ul>
       </div>
@@ -698,44 +718,118 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add functionality here if needed
     });
   });
-  
+
   // Price range slider
   const rangeSlider = document.querySelector('.custom-range');
   const minPriceInput = document.querySelectorAll('input[type="number"]')[0];
   const maxPriceInput = document.querySelectorAll('input[type="number"]')[1];
-  
+
   rangeSlider.addEventListener('input', function() {
     maxPriceInput.value = this.value;
   });
-  
+
   minPriceInput.addEventListener('input', function() {
     if (parseInt(this.value) > parseInt(maxPriceInput.value)) {
       this.value = maxPriceInput.value;
     }
   });
-  
+
   maxPriceInput.addEventListener('input', function() {
     if (parseInt(this.value) < parseInt(minPriceInput.value)) {
       this.value = minPriceInput.value;
     }
     rangeSlider.value = this.value;
   });
-  
+
   // Product hover effects
   const productCards = document.querySelectorAll('.product-card');
   productCards.forEach(card => {
     card.addEventListener('mouseenter', function() {
-      const button = this.querySelector('.order-button');
+      const button = this.querySelector('.add-to-cart');
       button.style.opacity = '1';
       button.style.transform = 'translateY(0)';
     });
-    
     card.addEventListener('mouseleave', function() {
-      const button = this.querySelector('.order-button');
+      const button = this.querySelector('.add-to-cart');
       button.style.opacity = '0';
       button.style.transform = 'translateY(4px)';
     });
   });
+
+  // Cart logic
+  function getCart() {
+    return JSON.parse(localStorage.getItem('cart') || '[]');
+  }
+  function setCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+  function updateCartCount() {
+    const cart = getCart();
+    document.getElementById('cart-count').textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  }
+  function showCartModal() {
+    const cart = getCart();
+    const cartItemsDiv = document.getElementById('cart-items');
+    cartItemsDiv.innerHTML = cart.length === 0 ? '<p class="text-gray-500">Your cart is empty.</p>' : cart.map((item, idx) => `
+      <div class="flex items-center mb-4">
+        <img src="${item.img}" alt="${item.name}" class="w-16 h-16 object-cover rounded mr-4">
+        <div class="flex-1">
+          <div class="font-semibold text-gray-900">${item.name}</div>
+          <div class="text-gray-500">₦${item.price.toLocaleString()} x ${item.qty}</div>
+        </div>
+        <button class="remove-item text-red-500 hover:text-primary ml-4" data-idx="${idx}"><i class="ri-delete-bin-6-line text-xl"></i></button>
+      </div>
+    `).join('');
+    document.getElementById('cart-total').textContent = '₦' + cart.reduce((sum, item) => sum + item.price * item.qty, 0).toLocaleString();
+    document.getElementById('cart-modal').classList.remove('hidden');
+  }
+  function hideCartModal() {
+    document.getElementById('cart-modal').classList.add('hidden');
+  }
+  document.getElementById('cart-icon').addEventListener('click', showCartModal);
+  document.getElementById('close-cart').addEventListener('click', hideCartModal);
+  document.getElementById('cart-modal').addEventListener('click', function(e) {
+    if (e.target === this) hideCartModal();
+  });
+  document.getElementById('cart-items').addEventListener('click', function(e) {
+    if (e.target.closest('.remove-item')) {
+      const idx = +e.target.closest('.remove-item').dataset.idx;
+      const cart = getCart();
+      cart.splice(idx, 1);
+      setCart(cart);
+      updateCartCount();
+      showCartModal();
+    }
+  });
+  document.getElementById('checkout-btn').addEventListener('click', function() {
+    const cart = getCart();
+    if (cart.length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+    alert('Thank you for your order! We will contact you soon.');
+    setCart([]);
+    updateCartCount();
+    hideCartModal();
+  });
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const name = this.dataset.name;
+      const price = +this.dataset.price;
+      const img = this.dataset.img;
+      let cart = getCart();
+      const idx = cart.findIndex(item => item.name === name);
+      if (idx > -1) {
+        cart[idx].qty += 1;
+      } else {
+        cart.push({ name, price, img, qty: 1 });
+      }
+      setCart(cart);
+      updateCartCount();
+      showCartModal();
+    });
+  });
+  updateCartCount();
 });
 </script>
 </body>
